@@ -1,0 +1,351 @@
+
+
+
+.Text-Box{
+    
+    padding: 3px;
+}
+.HeroImages{
+    display: flex;
+}
+.HeroImg{
+    border-radius: 20px;
+    width: 140px;
+    height: 250px;
+}
+.HeroVideo{
+    border-radius: 25px;
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+    padding: 0px 10px;
+}
+.HeroImg1{
+    border-radius: 20px;
+    width: 140px;
+    height: 250px;   
+    margin-top: 60px;
+}
+.Serching{
+    display: flex;
+    box-shadow: 0px 0px 3px  0px gray;
+    margin: 10px auto;
+    border-radius: 20px;
+    width: 55%;
+    padding: 6px;
+}
+.Serching .Border{
+    display: flex;
+    border-right: 2px solid #de601b;
+}
+.Serching .Border input{
+    outline: none;
+    border: none;
+}
+
+.Serching .Borders{
+    display: flex;
+}
+.Serching .Borders input{
+    outline: none;
+    border: none;
+}
+.Serve{
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 40px;
+}
+/* services */
+.Services{
+    width: 40%;
+    margin-left: 30px;
+    border: 1px solid red;
+
+}
+
+.SImg{
+    background-color: #de601b;
+    border-radius: 50px;
+    width: 20%;
+    padding: 8px;
+}
+.SImg{
+    background-color: #de601b;
+    border-radius: 50px;
+    width: 20%;
+    padding: 8px;
+}
+.Serve .Border{
+    padding: 30px;
+    border: 1px solid red;
+
+}
+
+/* Explore Cards */
+.Cards{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    display: grid;
+    margin: 20px 15px;
+    box-shadow: 0px 0px 4px 0px gray;
+    position: relative;
+
+}
+.CardPrice{
+    display: flex;
+    justify-content: space-between;
+
+}
+.CardPrice .Button{
+    background-color: #de601b;
+    color: #ffff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+}
+.Reviews{
+    position: absolute;
+    right: 10px;
+}
+
+/* experience  */
+.ExpirenceCards{
+    display: flex;
+}
+.ExpirenceCard{
+    background-color: #de601b;
+    padding: 10px;
+    width: 50px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+/* Gallery Images */
+.Gallerys{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 20px;
+}
+.Gallery1{
+    width: 50vh;
+    box-shadow: 0px 0px 10px 0px gray;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.Gallery1:hover{
+    transform: scale(0.9) ;
+}
+/* SubscribePage */
+.SubscribePage{
+    background-color: #cae5f4;
+    box-sizing: border-box;
+    padding:1px 40px ;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SubscribeText{
+    width: 98%;
+}
+.SubscribeInputPage {
+    height: 50px;
+    background-color: aliceblue;
+    width: 410px;
+    border-radius: 10px;
+}
+.SubscribeInputPage input{
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: none;
+}
+.SubscribeInputPage button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #faa935;
+}
+
+
+/* FooterSession */
+.Footer{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    padding: 30px 50px;
+}
+.FooterImage{
+    width: 80%;
+    margin-left: 20px;
+}
+.DiscoverPage{
+    margin-right: 30px;
+}
+.ContactPage{
+    width: 50%;
+}
+.ContactPageDetail{
+    display: flex;
+}
+.copywrite {
+    padding: 5px;
+    text-align: center;
+}
+
+.copywrite p {
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+/* LoginSession */
+
+.LoginPage{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    box-shadow: 0px 2px 3px 0px gray;
+    padding: 20px 20px;
+    margin: 80px 240px;
+
+}
+.LoginImage img {
+    width: 80%;
+    height: 100%;
+}
+.LoginForm{
+    background-color: #faa935;
+    position: relative;
+    
+}
+.LoginForm img{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    bottom: 93%;
+}
+.LoginHeader{
+    position: absolute;
+    color: #ffff;
+    top: 20%;
+    left: 40%;   
+}
+.LoginForm #Email{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.LoginForm #UserPassword{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.LoginForm button{
+    background-color: #0b2727;
+    color: #ffff;
+    outline: none;
+    border: none;
+    width: 50%;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 53%;
+    left: 28%;
+}
+.LoginForm p{
+    color: #ffff;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 50%;
+}
+
+/* Register Session */
+
+.RegisterPage{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    box-shadow: 0px 2px 3px 0px gray;
+    padding: 20px 20px;
+    margin: 80px 240px;
+
+}
+.RegisterImage img {
+    width: 80%;
+    height: 100%;
+}
+.RegisterForm{
+    background-color: #faa935;
+    position: relative;
+    
+}
+.RegisterForm img{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    bottom: 93%;
+}
+.RegisterHeader{
+    position: absolute;
+    color: #ffff;
+    top: 15%;
+    left: 35%;   
+}
+.RegisterForm #UserName{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+
+}
+.RegisterForm #Email{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.RegisterForm #UserPassword{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.RegisterForm button{
+    background-color: #0b2727;
+    color: #ffff;
+    outline: none;
+    border: none;
+    width: 65%;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 18%;
+}
+.RegisterForm p{
+    color: #ffff;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 50%;
+}
+

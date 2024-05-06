@@ -1,0 +1,14 @@
+.ToursPage {
+    position: relative; 
+}
+.ToursPage img{
+    height: 70vh;
+    width: 100%;
+    
+}
+.ToursPage h2{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: #ffff;
+}

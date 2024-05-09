@@ -1,0 +1,18 @@
+
+
+.DummyUser{
+    margin: 1px 15px;
+    text-align: center;
+    width: 85px;
+    padding: 30px auto;
+    background-color: #faa935;
+    border-radius: 30px;
+}
+
+.LogoutButton{
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    background-color: #212529;
+    color: #ffffff;
+}

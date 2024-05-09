@@ -44,12 +44,8 @@ const Home = () => {
                 <img src={HeroImg} alt="" className="HeroImg" />
               </div>
               <div>
-                <video
-                  src={HeroVideo}
-                  className="HeroVideo"
-                  controls
-                ></video> 
-               </div>
+                <video src={HeroVideo} className="HeroVideo" controls></video>
+              </div>
               <div>
                 <img src={HeroImg1} alt="" className="HeroImg1" />
               </div>

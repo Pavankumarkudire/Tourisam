@@ -1,0 +1,77 @@
+
+/* Register Session */
+
+.RegisterPage{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    box-shadow: 0px 2px 3px 0px gray;
+    padding: 20px 20px;
+    margin: 80px 240px;
+
+}
+.RegisterImage img {
+    width: 80%;
+    height: 100%;
+}
+.RegisterForm{
+    background-color: #faa935;
+    position: relative;
+    
+}
+.RegisterForm img{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    bottom: 93%;
+}
+.RegisterHeader{
+    position: absolute;
+    color: #ffff;
+    top: 15%;
+    left: 35%;   
+}
+.RegisterForm #UserName{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+
+}
+.RegisterForm #Email{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.RegisterForm #UserPassword{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.RegisterForm button{
+    background-color: #0b2727;
+    color: #ffff;
+    outline: none;
+    border: none;
+    width: 65%;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 18%;
+}
+.RegisterForm p{
+    color: #ffff;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 50%;
+}

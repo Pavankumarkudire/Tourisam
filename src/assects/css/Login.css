@@ -1,0 +1,68 @@
+/* LoginSession */
+
+.LoginPage{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    box-shadow: 0px 2px 3px 0px gray;
+    padding: 20px 20px;
+    margin: 80px 240px;
+
+}
+.LoginImage img {
+    width: 80%;
+    height: 100%;
+}
+.LoginForm{
+    background-color: #faa935;
+    position: relative;
+    
+}
+.LoginForm img{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    bottom: 93%;
+}
+.LoginHeader{
+    position: absolute;
+    color: #ffff;
+    top: 20%;
+    left: 40%;   
+}
+.LoginForm #Email{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.LoginForm #UserPassword{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.LoginForm button{
+    background-color: #0b2727;
+    color: #ffff;
+    outline: none;
+    border: none;
+    width: 50%;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 53%;
+    left: 28%;
+}
+.LoginForm p{
+    color: #ffff;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 50%;
+}
+

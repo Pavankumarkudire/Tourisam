@@ -130,7 +130,7 @@
     gap: 20px;
 }
 .Gallery1{
-    width: 50vh;
+    width: 100%;
     box-shadow: 0px 0px 10px 0px gray;
     transition: transform 0.2s ease;
     cursor: pointer;

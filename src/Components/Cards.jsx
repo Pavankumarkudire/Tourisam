@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DataAPI from "../assects/data/DataAPI";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const [data, setData] = useState([]);
@@ -10,17 +10,17 @@ const Cards = () => {
     setData(DataAPI);
   }, []);
 
-  const SinglePage = useNavigate;
-  // console.log(data);
 
   return (
     <>
       <p className="ms-5 bg-warning rounded-pill" style={{width:"50px"}}>Explore</p>
       <h5 className="ms-5">Our featured tours</h5>
-      <div className="row Cards">
+      <div className="container">
+      <div className="row ">
         {data.length > 0 ? (
           data.map((product) => (
-            <div className="card p-0" style={{ width: "20%" }} onClick={()=> handlePagination(SinglePage)}>
+              <div className="card" style={{ width: "25%" }} >
+                <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}> 
               <img src={product.photo} alt="" />
               <div className="p-2">
                 <i
@@ -40,11 +40,13 @@ const Cards = () => {
                   <button className="Button">Book Now</button>
                 </div>
               </div>
+            </Link>
             </div>
           ))
         ) : (
           <p>Loading...!</p>
         )}
+      </div>
       </div>
     </>
   );

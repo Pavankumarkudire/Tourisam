@@ -3,22 +3,27 @@ import DataAPI from "../assects/data/DataAPI";
 
 function Pagination1() {
   const [data, setData] = useState([]);
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState(1);
+  const itemPerPage = 6;
 
   useEffect(() => {
     setData(DataAPI);
-  });
+  }, []);
 
-  const handleClick = (num) => {
-    setNum(num);
+  const handleClick = (page) => {
+    setNum(page);
   };
+
+  const startIndex = (num - 1) * itemPerPage;
+  const endIndex = startIndex + itemPerPage;
+
   return (
     <div>
       <div className="container  ">
-        <div className="row">
+        
           <div className="row">
-            {data.map((product) => (
-              <div className="card p-0" style={{ width: "20%" }}>
+            {data.slice(startIndex, endIndex).map((product, index) => (
+              <div key={index} className="card col-md-4 p-3 " >
                 <img src={product.photo} alt="" />
                 <div className="p-2">
                   <i
@@ -41,15 +46,18 @@ function Pagination1() {
               </div>
             ))}
           </div>
+        
+        <div className="pagination">
+          {[1, 2, 3, 4, 5].map((page) => (
+            <button
+              key={page}
+              className={`btn btn-primary ${num === page ? 'active' : ""} ms-1`}
+              onClick={() => handleClick(page)}
+            >
+              {page}
+            </button>
+          ))}
         </div>
-        {[1, 2].map((num) => (
-          <button
-            className=" btn btn-primary ms-1"
-            onClick={() => handleClick(num)}
-          >
-            {num}
-          </button>
-        ))}
       </div>
     </div>
   );

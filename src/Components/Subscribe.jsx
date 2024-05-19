@@ -1,5 +1,5 @@
 import React from "react";
-import SubScribeImg from "../assects/images/male-tourist.png"
+import SubScribeImg from "../images/male-tourist.png"
 
 const Subscribe = () => {
   return (

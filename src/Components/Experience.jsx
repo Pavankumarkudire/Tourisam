@@ -1,5 +1,5 @@
 import React from 'react'
-import ExperienceImg from "../assects/images/experience.png"
+import ExperienceImg from "../images/experience.png"
 
 const Experience = () => {
   return (

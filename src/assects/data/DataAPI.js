@@ -1,10 +1,10 @@
- import img1 from "../images/tour-img03.jpg"
- import img2 from "../images/tour-img04.jpg"
- import img3 from "../images/tour-img05.jpg"
- import img4 from "../images/tour-img06.jpg"
- import img5 from "../images/tour-img07.jpg"
- import img6 from "../images/tour-img01.jpg"
- import img7 from "../images/tour-img02.jpg"
+ import img1 from "../tour-images/tour-img03.jpg"
+ import img2 from "../tour-images/tour-img04.jpg"
+ import img3 from "../tour-images/tour-img05.jpg"
+ import img4 from "../tour-images/tour-img06.jpg"
+ import img5 from "../tour-images/tour-img07.jpg"
+ import img6 from "../tour-images/tour-img01.jpg"
+ import img7 from "../tour-images/tour-img02.jpg"
  
  const DataAPI =[
     {

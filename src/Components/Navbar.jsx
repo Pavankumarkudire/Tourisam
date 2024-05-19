@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assects/images/logo.png";
+import logo from "../images/logo.png";
 import { useAuth } from "./Authentication";
-import "../assects/css/Style.css";
-import "../assects/css/Login.css";
-import "../assects/css/Register.css";
-import "../assects/css/Footer.css";
-import "../assects/css/Navbar.css";
+import "../css/Style.css"
+import "../css/Login.css"
+import "../css/Register.css";
+import "../css/Footer.css";
+import "../css/Navbar.css";
 
 const Navbar = () => {
   const { isLoggedIn, logout } = useAuth();

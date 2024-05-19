@@ -1,28 +1,42 @@
 import React, { useEffect, useState } from "react";
-import DataAPI from "../assects/data/DataAPI";
+// import DataAPI from "../assects/data/DataAPI";
 
 function Pagination1() {
   const [data, setData] = useState([]);
   const [num, setNum] = useState(1);
   const itemPerPage = 6;
 
+
   useEffect(() => {
-    setData(DataAPI);
+    getData();
   }, []);
+  const getData = async () => {
+    const data = await fetch(`https://tour-booking-tu7f.onrender.com/api/v1/tours`,
+        {
+            method: "GET",
+            headers :{
+                "app-id" : "65264833377b2d988a461078",
+            },
+        }
+    );
+    const res = await data.json();
+    setData(res.data);
+  }
 
   const handleClick = (page) => {
     setNum(page);
   };
-
   const startIndex = (num - 1) * itemPerPage;
   const endIndex = startIndex + itemPerPage;
+
+
 
   return (
     <div>
       <div className="container  ">
         
           <div className="row">
-            {data.slice(startIndex, endIndex).map((product, index) => (
+            {data.slice(startIndex,endIndex).map((product, index) => (
               <div key={index} className="card col-md-4 p-3 " >
                 <img src={product.photo} alt="" />
                 <div className="p-2">
@@ -31,7 +45,7 @@ function Pagination1() {
                     style={{ color: "#de601b" }}
                   ></i>
                   <span>{product.city}</span>
-                  <span className="Reviews">{product.reviews}</span>
+                  <span className="Reviews">{product.reviews.length}</span>
                 </div>
                 <div className="p-2">
                   <h5>{product.title}</h5>

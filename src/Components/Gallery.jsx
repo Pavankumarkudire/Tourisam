@@ -1,12 +1,12 @@
 import React from 'react'
-import GallaryImg1 from "../assects/images/gallery-01.jpg"
-import GallaryImg2 from "../assects/images/gallery-02.jpg"
-import GallaryImg3 from "../assects/images/gallery-03.jpg"
-import GallaryImg4 from "../assects/images/gallery-04.jpg"
-import GallaryImg5 from "../assects/images/gallery-05.jpg"
-import GallaryImg6 from "../assects/images/gallery-06.jpg"
-import GallaryImg7 from "../assects/images/gallery-07.jpg"
-import GallaryImg8 from "../assects/images/gallery-08.jpg"
+import GallaryImg1 from "../images/gallery-01.jpg"
+import GallaryImg2 from "../images/gallery-02.jpg"
+import GallaryImg3 from "../images/gallery-03.jpg"
+import GallaryImg4 from "../images/gallery-04.jpg"
+import GallaryImg5 from "../images/gallery-05.jpg"
+import GallaryImg6 from "../images/gallery-06.jpg"
+import GallaryImg7 from "../images/gallery-07.jpg"
+import GallaryImg8 from "../images/gallery-08.jpg"
 
 const Gallery = () => {
   return (

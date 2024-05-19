@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./Navbar";
-import "../assects/css/Style.css";
-import world from "../assects/images/world.png";
-import HeroImg from "../assects/images/hero-img01.jpg";
-import HeroVideo from "../assects/images/hero-video.mp4";
-import HeroImg1 from "../assects/images/hero-img02.jpg";
+import "../css/Style.css";
+import world from "../images/world.png";
+import HeroImg from "../images/hero-img01.jpg";
+import HeroVideo from "../images//hero-video.mp4";
+import HeroImg1 from "../images/hero-img02.jpg";
 import Serching from "./Serching";
 import Servises from "./Services";
 import Cards from "./Cards";
@@ -12,6 +12,7 @@ import Experience from "./Experience";
 import Gallery from "./Gallery";
 import Subscribe from "./Subscribe";
 import Footer from "./Footer";
+import Client from "./Client";
 
 const Home = () => {
   return (
@@ -58,6 +59,7 @@ const Home = () => {
       <Cards />
       <Experience />
       <Gallery />
+      <Client />
       <Subscribe />
       <Footer />
     </div>
@@ -65,3 +67,30 @@ const Home = () => {
 };
 
 export default Home;
+
+
+// {data.length > 0 ? (
+//     data.map((product) => (
+//       <div className="col-4" key={product.id}>
+//         <div className="card" style={{ width: "100%" }}>
+//           <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: '#000000' }}>
+//             <img src={product.photo} className="card-img-top" alt="" />
+//             <div className="card-body">
+//                  <span>{product.city}</span>
+//               <span className="Reviews">{product.reviews}</span>
+//               <h5 className="card-title">{product.title}</h5>
+//               <div className="CardPrice">
+//                 <p>
+//                   <span style={{ color: "#de601b" }}>${product.price}</span>
+//                   /per Person
+//                 </p>
+//                 <button className="Button">Book Now</button>
+//               </div>
+//             </div>
+//           </Link>
+//         </div>
+//       </div>
+//     ))
+//   ) : (
+//     <p>Loading...!</p>
+//   )}

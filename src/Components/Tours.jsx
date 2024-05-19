@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import TourImg from "../assects/images/tour.jpg";
-import "../assects/css/Tours.css";
+import TourImg from "../images/tour.jpg";
+import "../css/Tours.css";
 import Serching from "./Serching";
 import Pagination from "./Pagination";
 import Subscribe from "./Subscribe";

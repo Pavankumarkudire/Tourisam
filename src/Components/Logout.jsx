@@ -1,25 +1,23 @@
-import React, { useEffect } from 'react';
-import Navbar from './Navbar';
-import { useAuth } from './Authentication';
+import React, { useEffect } from "react";
+import Navbar from "./Navbar";
+import { useAuth } from "./Authentication";
 import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
-  const { logout } = useAuth(); 
+  const { logout } = useAuth();
   const navigate = useNavigate();
 
- useEffect(()=>{
+  useEffect(() => {
+    const handleLogout = () => {
+      logout();
+      navigate("/");
+    };
     handleLogout();
- },[])
-
-  const handleLogout = () => {
-    logout(); 
-    navigate("/"); 
-  };
+  }, [logout, navigate]);
 
   return (
     <div>
-      <Navbar isLoggedIn={true} /> 
-      {/* <div onLoad={handleLogout}></div> */}
+      <Navbar isLoggedIn={true} />
     </div>
   );
 };

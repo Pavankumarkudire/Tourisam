@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import { AuthProvider} from "./Components/Authentication";
 import Logout from "./Components/Logout";
+import Products from "./Components/Products";
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/Logout" element={<Logout />}/>
+            <Route path="/product/:id" element={<Products/>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

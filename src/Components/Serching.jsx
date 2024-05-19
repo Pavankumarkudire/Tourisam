@@ -6,7 +6,7 @@ const Serching = () => {
       <div className="Serching ms-5">
           <div className="Border">
             <div>
-              <i className="fa-solid fa-location-dot  "
+              <i className="fa-solid fa-location-dot"
                 style={{ color: "#de601b" }}
               ></i>
             </div>

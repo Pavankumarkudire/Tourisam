@@ -1,7 +1,7 @@
 import React from "react";
-import SImg from "../assects/images/weather.png"
-import SImg1 from "../assects/images/guide.png"
-import SImg2 from "../assects/images/guide.png"
+import SImg from "../images/weather.png"
+import SImg1 from "../images/guide.png"
+import SImg2 from "../images/guide.png"
 
 const Servises = () => {
   return (

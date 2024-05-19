@@ -1,7 +1,7 @@
 import React, {useState } from "react";
 import Navbar from "./Navbar";
-import RegisterImg from "../assects/images/register.png";
-import RegisterImg1 from "../assects/images/user.png";
+import RegisterImg from "../images/experience.png";
+import RegisterImg1 from "../images/experience.png";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 

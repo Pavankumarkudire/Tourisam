@@ -1,80 +1,90 @@
+.Text-Box {
 
-
-.Text-Box{
-    
     padding: 3px;
 }
-.HeroImages{
+
+.HeroImages {
     display: flex;
 }
-.HeroImg{
+
+.HeroImg {
     border-radius: 20px;
     width: 100%;
     height: 250px;
 }
-.HeroVideo{
+
+.HeroVideo {
     border-radius: 25px;
     width: 100%;
     height: 250px;
     margin-top: 30px;
     padding: 0px 10px;
 }
-.HeroImg1{
+
+.HeroImg1 {
     border-radius: 20px;
     width: 100%;
-    height: 250px;   
+    height: 250px;
     margin-top: 60px;
 }
-.Serching{
+
+.Serching {
     display: flex;
-    box-shadow: 0px 0px 3px  0px gray;
+    box-shadow: 0px 0px 3px 0px gray;
     margin: 10px auto;
     border-radius: 20px;
     width: 55%;
     padding: 6px;
 }
-.Serching .Border{
+
+.Serching .Border {
     display: flex;
     border-right: 2px solid #de601b;
 }
-.Serching .Border input{
+
+.Serching .Border input {
     outline: none;
     border: none;
 }
 
-.Serching .Borders{
+.Serching .Borders {
     display: flex;
 }
-.Serching .Borders input{
+
+.Serching .Borders input {
     outline: none;
     border: none;
 }
-.Serve{
+
+.Serve {
     display: flex;
     /* border: 1px solid red; */
     padding: 40px;
 }
+
 /* services */
-.Services{
+.Services {
     width: 40%;
     margin-left: 30px;
     border: 1px solid red;
 
 }
 
-.SImg{
+.SImg {
     background-color: #de601b;
     border-radius: 50px;
     width: 20%;
     padding: 8px;
 }
-.SImg{
+
+.SImg {
     background-color: #de601b;
     border-radius: 50px;
     width: 20%;
     padding: 8px;
 }
-.Serve .Border{
+
+.Serve .Border {
     padding: 30px;
     border: 1px solid red;
 
@@ -82,26 +92,38 @@
 
 /* Explore Cards */
 
-.container{
+.container {
     width: 10px;
 }
 
-.card{
+.card {
     margin: 20px 0px;
     box-shadow: 0px 0px 4px 0px gray;
     position: relative;
 
 }
 
-.card img{
+.card img {
     width: 100%;
 }
-.CardPrice{
+
+.card-city {
+    display: flex;
+}
+
+.card-review {
     display: flex;
     justify-content: space-between;
 
 }
-.CardPrice .Button{
+
+.card-Book {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-button {
     background-color: #de601b;
     color: #ffff;
     outline: none;
@@ -109,17 +131,72 @@
     border-radius: 5px;
 
 }
-.Reviews{
-    position: absolute;
+
+.card-Price-Book {
+    display: flex;
+    justify-content: space-between;
+}
+.ProductSerchingPage {
+    border: 2px solid red;
+    height: 50px;
+    width: 410px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+
+}
+.ProductSerchingPage button{
+    /* height: 40px ; */
+    background-color: rgb(214, 184, 15);
+    width: 80px;
+    border-radius: 10px;
+    padding: 6px 5px;
+}
+.ProductSerchingPage input{
+    width: 300px;
+    /* height: 50px; */
+    outline: none;
+    border: none;
+}
+
+
+/* single page application */
+.Reviews {
     right: 10px;
 }
-.Bookings{
+
+.Bookings {
     display: flex;
+    justify-content: space-between;
 }
-.Bookings p{
+
+.Bookings p {
     margin: 0px 10px;
 }
-.container button{
+
+.card-Address {
+    display: flex;
+}
+
+.address {
+    margin-left: 30px;
+}
+.Address-Location{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-Booking {
+    width: 90%;
+    padding: 5px 10px;
+    margin: 6px;
+    outline: none;
+    border: none;
+    background-color: #faa935;
+    border-radius: 20px;
+}
+
+.pagination button {
     outline: none;
     border: none;
     background-color: #faa935;
@@ -127,10 +204,11 @@
 }
 
 /* experience  */
-.ExpirenceCards{
+.ExpirenceCards {
     display: flex;
 }
-.ExpirenceCard{
+
+.ExpirenceCard {
     background-color: #de601b;
     padding: 10px;
     width: 50px;
@@ -140,52 +218,56 @@
 
 
 /* Gallery Images */
-.Gallerys{
+.Gallerys {
     display: grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(4, auto);
     gap: 20px;
 }
-.Gallery1{
+
+.Gallery1 {
     width: 100%;
     box-shadow: 0px 0px 10px 0px gray;
     transition: transform 0.2s ease;
     cursor: pointer;
 }
-.Gallery1:hover{
-    transform: scale(0.9) ;
+
+.Gallery1:hover {
+    transform: scale(0.9);
 }
 
 /* SubscribePage */
-.SubscribePage{
+.SubscribePage {
     background-color: #cae5f4;
     box-sizing: border-box;
-    padding:1px 40px ;
+    padding: 1px 40px;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.SubscribeText{
+
+.SubscribeText {
     width: 98%;
 }
+
 .SubscribeInputPage {
     height: 50px;
     background-color: aliceblue;
     width: 410px;
     border-radius: 10px;
 }
-.SubscribeInputPage input{
+
+.SubscribeInputPage input {
     width: 300px;
     height: 50px;
     outline: none;
     border: none;
 }
-.SubscribeInputPage button{
+
+.SubscribeInputPage button {
     width: 100px;
     height: 40px;
     border: none;
     border-radius: 10px;
     background-color: #faa935;
 }
-
-

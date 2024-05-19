@@ -2,21 +2,32 @@
 
 /* FooterSession */
 .Footer{
-    display: grid;
-    grid-template-columns: repeat(4,auto);
+    display: flex;
     align-items: center;
     padding: 30px 50px;
 }
 .FooterImage{
     width: 80%;
-    margin-left: 20px;
+    margin-right: 20px;
 }
+.social-Media-Logos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .DiscoverPage{
-    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.Custome-Link{
+    text-decoration: none;
+    color: #000000;
 }
 .ContactPage{
-    width: 50%;
+    width: 100%;
 }
+
+
 .ContactPageDetail{
     display: flex;
 }
@@ -30,4 +41,5 @@
     font-family: sans-serif;
     font-size: 15px;
 }
+
 

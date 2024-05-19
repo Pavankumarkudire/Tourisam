@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import LoginImg from "../images/experience.png";
-import LoginImg1 from "../images/experience.png";
+import LoginImg from "../images/login.png";
+import LoginImg1 from "../images/user.png";
 import Footer from "./Footer";
 import { useAuth } from "./Authentication";
 import { useNavigate } from "react-router-dom";

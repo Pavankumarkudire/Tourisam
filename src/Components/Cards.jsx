@@ -7,9 +7,9 @@ const Cards = () => {
   useEffect(() => {
     getData();
   }, []);
+  
 
   const getData = async () => {
-    try {
       const response = await fetch(
         "https://tour-booking-tu7f.onrender.com/api/v1/tours",
         {
@@ -21,14 +21,13 @@ const Cards = () => {
       );
       const responseData = await response.json();
       setData(responseData.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
+      console.log(responseData.data);
     }
-  };
+    
 
   return (
     <>
-      <p className="ms-5 bg-warning rounded-pill" style={{ width: "50px" }}>
+      <p className="ms-5 ps-3 bg-warning rounded-pill" style={{ width: "7%" }}>
         Explore
       </p>
       <h5 className="ms-5">Our featured tours</h5>
@@ -36,8 +35,8 @@ const Cards = () => {
         <div className="row">
           {data.length > 0 ? (
             data.map((tour) => (
-              <div className="col-lg-4 col-md-6 mb-4" key={tour._id}>
-                <div className="card h-100">
+            
+                <div className="card col-md-4 mb-4">
                   <Link
                     to={`/product/${tour._id}`}
                     style={{ textDecoration: "none", color: "#000000" }}
@@ -45,7 +44,7 @@ const Cards = () => {
                     <img
                       className="card-img-top"
                       src={tour.photo}
-                      alt={tour.photo}
+                      alt={tour.title}
                     />
                     <div className="card-body">
                       <div className="card-review">
@@ -91,7 +90,7 @@ const Cards = () => {
                     </div> */}
                   </Link>
                 </div>
-              </div>
+            
             ))
           ) : (
             <p>Loading...!</p>

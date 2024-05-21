@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
+import { RiMapPinUserFill } from "react-icons/ri";
+import { IoLocationOutline } from "react-icons/io5";
+import { LuCircleDollarSign } from "react-icons/lu";
+import { RiMapPinTimeLine } from "react-icons/ri";
+import Footer from "./Footer";
+
 
 const Products = () => {
   const [product, setProduct] = useState(null);
@@ -99,24 +105,21 @@ const Products = () => {
                   </span>
                 </p>
                 <div className="address">
-                  <i className="fa-regular fa-location-smile"></i>
+                <RiMapPinUserFill style={{ fontSize: "20px"}}/>
                   {product.address}
                 </div>
               </div>
               <div className="Address-Location">
                 <p>
-                  <i
-                    className="fa-solid fa-location-dot"
-                    style={{ color: "#de601b" }}
-                  ></i>
+                <IoLocationOutline style={{ fontSize: "20px"}}/>
                   {product.city}
                 </p>
                 <p>
-                  <i className="fa-solid fa-square-dollar"></i>
+                  <LuCircleDollarSign  style={{ fontSize: "20px"}}/>
                   {product.price} per person
                 </p>
                 <p>
-                  <i className="fa-solid fa-location-plus"></i>
+                <RiMapPinTimeLine  style={{ fontSize: "20px"}}/>
                   {product.distance} k/m
                 </p>
                 <p>
@@ -125,7 +128,7 @@ const Products = () => {
                 </p>
               </div>
               <h4>Description</h4>
-              <input type="text" placeholder="this is the description" />
+              <textarea name="" className="DescriptionAddress" placeholder="this is the description"></textarea>
             </div>
             <div className="Reviews">
               <h5>Riviews ({product.reviews.length} reviews)</h5>
@@ -161,6 +164,7 @@ const Products = () => {
       ) : (
         <p>Loading....!</p>
       )}
+      <Footer />
     </>
   );
 };

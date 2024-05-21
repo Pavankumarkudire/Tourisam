@@ -12,3 +12,40 @@
     left: 45%;
     color: #ffff;
 }
+
+
+.pagination-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Pagination-review {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.CardPrice{
+    display: flex;
+    justify-content: space-between;
+}
+.CardPrice .Button{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #faa935;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pagination button {
+    outline: none;
+    border: none;
+    background-color: #faa935;
+    border-radius: 20px;
+
+}

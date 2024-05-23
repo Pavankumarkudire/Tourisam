@@ -11,7 +11,7 @@ import GallaryImg8 from "../images/gallery-08.jpg"
 const Gallery = () => {
   return (
     <div className='container'>
-      <p>Gallary</p>
+      <p className='GallerySession'>Gallary</p>
       <h5>Visit our custumers tour gallery</h5>
       <div className='Gallerys'>
         <img src={GallaryImg1} alt="" className='Gallery1'/>

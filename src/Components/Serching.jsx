@@ -12,6 +12,7 @@ const Serching = () => {
   useEffect(() => {
     if (city || distance || maxGroupSize) {
       getData();
+      
     }
   }, [city, distance, maxGroupSize]);
 
@@ -20,7 +21,13 @@ const Serching = () => {
       const response = await fetch(
         `https://tour-booking-tu7f.onrender.com/api/v1/tours/search/getTourBySearch?city=${encodeURIComponent(
           city
-        )}&distance=${distance}&maxGroupSize=${maxGroupSize}`
+        )}&distance=${distance}&maxGroupSize=${maxGroupSize}`,
+        {
+            method : "GET",
+            headers : {
+                "app-id": "65264833377b2d988a461078",
+            }
+        }
       );
       const res = await response.json();
 
@@ -46,7 +53,7 @@ const Serching = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="Serching ms-5">
         <div className="Border">
           <div>
@@ -157,14 +164,14 @@ const Serching = () => {
                         </div>
                       </div>
                     </Link>
-                  </div>
+                  </div>  
                 ))}
               </div>
             )}
           </>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

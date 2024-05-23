@@ -7,6 +7,7 @@ import SliderImg3 from "../images/ava-3.jpg";
 const Client = () => {
   const clint = [
     {
+      id: 1,
       name: "John Deo",
       customer: "Customer",
       Description:
@@ -14,6 +15,7 @@ const Client = () => {
       Image: SliderImg1,
     },
     {
+      id: 2,
       name: "Cathrine jo",
       customer: "Clint",
       Description:
@@ -21,6 +23,7 @@ const Client = () => {
       Image: SliderImg2,
     },
     {
+      id: 3,
       name: "John Deo",
       customer: "Customer",
       Description:
@@ -28,6 +31,7 @@ const Client = () => {
       Image: SliderImg3,
     },
     {
+      id: 4,
       name: "John Deo",
       customer: "Customer",
       Description:
@@ -35,6 +39,7 @@ const Client = () => {
       Image: SliderImg1,
     },
     {
+      id: 5,
       name: "Cathrine jo",
       customer: "Clint",
       Description:
@@ -42,6 +47,7 @@ const Client = () => {
       Image: SliderImg2,
     },
     {
+      id: 6,
       name: "John Deo",
       customer: "Customer",
       Description:
@@ -49,6 +55,31 @@ const Client = () => {
       Image: SliderImg3,
     },
     {
+      id: 7,
+      name: "John Deo",
+      customer: "Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa nesciunt iusto ex rem, minus animi dolorum et totam beatae unde atque accusamus rerum nisi eveniet, quaerat blanditiis expedita.",
+      Image: SliderImg1,
+    },
+    {
+      id: 8,
+      name: "John Deo",
+      customer: "Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa nesciunt iusto ex rem, minus animi dolorum et totam beatae unde atque accusamus rerum nisi eveniet, quaerat blanditiis expedita.",
+      Image: SliderImg2,
+    },
+    {
+      id: 9,
+      name: "John Deo",
+      customer: "Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa nesciunt iusto ex rem, minus animi dolorum et totam beatae unde atque accusamus rerum nisi eveniet, quaerat blanditiis expedita.",
+      Image: SliderImg3,
+    },
+    {
+      id: 10,
       name: "John Deo",
       customer: "Customer",
       Description:
@@ -84,8 +115,8 @@ const Client = () => {
                     style={{ width: "100%" }}
                   />
                 </p>
-                <div>
-                  <p style={{ margin: "20px" }}>{data.name}</p>
+                <div style={{ margin: "0px 20px" }}>
+                  <p >{data.name}</p>
                   <p>{data.customer}</p>
                 </div>
               </div>

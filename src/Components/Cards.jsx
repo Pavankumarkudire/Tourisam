@@ -67,7 +67,7 @@ const Cards = () => {
                                     (sum, review) => sum + review.rating,
                                     0
                                   ) / tour.reviews.length
-                                ).toFixed(1)
+                                ).toFixed(0)
                               : "No ratings"}
                             ({tour.reviews.length}){" "}
                           </span>

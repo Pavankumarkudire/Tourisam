@@ -14,8 +14,8 @@
 }
 
 .HeroVideo {
-    border-radius: 25px;
-    width: 100%;
+    border-radius: 20px;
+    /* width: 100%; */
     height: 250px;
     margin-top: 30px;
     padding: 0px 10px;
@@ -100,6 +100,7 @@
 
 
 .card {
+    display: flex;
     margin: 20px 0px;
     box-shadow: 0px 0px 4px 0px gray;
 
@@ -140,42 +141,69 @@
 }
 .ProductSerchingPage {
     border: 2px solid red;
-    height: 50px;
-    width: 410px;
+    height: 60px;
+    width: 500px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
     margin: 20px;
-    padding: 10px;
+    /* padding: 10px; */
 
 }
 .ProductSerchingPage button{
-    /* height: 40px ; */
     background-color: rgb(214, 184, 15);
-    width: 80px;
+    width: 100px;
     border-radius: 10px;
-    padding: 6px 5px;
+    margin: 7px;
+    /* padding: 6px 5px; */
 }
 .ProductSerchingPage input{
-    width: 300px;
-    /* height: 50px; */
+    margin: 2px;
+    height: 50px;
     outline: none;
     border: none;
 }
 
 
 /* single page application */
+
+.SinglePage{
+    display: flex;
+}
+.singlePageRight{
+    padding: 20px 30px; 
+    height: 100%;
+    margin-top: 30px !important;
+}
+.PriceOfPerson{
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+
+}
 .Reviews {
-    right: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.Bookings{
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.Bookings {
+.Booking {
     display: flex;
     justify-content: space-between;
 }
 
+
 .Bookings p {
-    margin: 0px 10px;
+    margin: 10px;
 }
 
+.BookingInfo{
+    margin-top: 40px;
+    border-radius: 10px;
+}
 .card-Address {
     display: flex;
 }
@@ -187,6 +215,22 @@
 .Address-Location{
     display: flex;
     justify-content: space-between;
+}
+
+.Information{
+    margin: 10px;
+}
+.Information input{
+    border: none;
+    border-bottom: 0.1px solid ;
+    margin: 15px;
+    border-radius: 5px;
+}
+.DataInformation{
+    display: flex;
+}
+.DataInformation input{
+    width: 40%;
 }
 
 .product-Booking {
@@ -203,9 +247,35 @@
     outline: none;
     border: none;
 }
+.userReviews{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.UserReview{
+    display: flex;
+
+}
+.UserReview input{
+    outline: none;
+    border: none;
+}
+.userRating{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
 
 
 /* experience  */
+
+.experienceSession{
+    background-color: #faa935;
+    width: 90px;
+    border-radius: 20px ;
+    padding-left: 5px;
+}
 .ExpirenceCards {
     display: flex;
 }
@@ -220,6 +290,12 @@
 
 
 /* Gallery Images */
+.GallerySession{
+    background-color: #faa935;
+    width: 80px;
+    border-radius: 20px ;
+    padding-left: 14px;
+}
 .Gallerys {
     display: grid;
     grid-template-columns: repeat(4, auto);

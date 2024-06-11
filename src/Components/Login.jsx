@@ -3,35 +3,43 @@ import Navbar from "./Navbar";
 import LoginImg from "../images/login.png";
 import LoginImg1 from "../images/user.png";
 import Footer from "./Footer";
+import { Link, json, useNavigate } from "react-router-dom";
 import { useAuth } from "./Authentication";
-import { useNavigate } from "react-router-dom";
-
-const AuthenticatedUser = (email, password) => {
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  if (userData && userData.email === email && userData.password === password) {
-    return true;
-  } else {
-    alert("please enter the  email and password");
-  }
-};
 
 const Login = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (email && password) {
-      const isAuthenticated = AuthenticatedUser(email, password);
-      if (isAuthenticated) {
-        navigation("/");
-        login();
-      } else {
-        alert("Invalid  email or password.Please try again.");
+      try {
+        const response = await fetch(
+         ` https://tour-booking-tu7f.onrender.com/api/v1/auth/login`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({email, password}),
+          }
+        );
+        if (response.ok) {
+          const data = await response.json();
+          console.log("login Sucussful:", data);
+          alert("login sucussful");
+          localStorage.setItem("userData", JSON.stringify(data));
+          navigate("/")
+          login()
+          
+        }else{
+            const errorData = await response.json()
+            alert(`Login failed: ${errorData.message}`);
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
       }
-    } else {
-      alert("please enter the email and password.");
     }
   };
 
@@ -40,12 +48,12 @@ const Login = () => {
       <Navbar isLoggedIn={!false} />
       <div className="LoginPage">
         <div className="LoginImage">
-          <img src={LoginImg} alt="" />
+          <img src={LoginImg} alt="Login" />
         </div>
         <div className="LoginForm">
-          <img src={LoginImg1} alt="" />
+          <img src={LoginImg1} alt="User" />
           <h4 className="LoginHeader">Login</h4>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
               id="Email"
@@ -64,7 +72,12 @@ const Login = () => {
           <button onClick={handleLogin}>Login</button>
           <p>
             Don't have an account?{" "}
-            <span style={{ color: "black" }}>Register</span>
+            <Link
+              to="/register"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              <span>Register</span>
+            </Link>
           </p>
         </div>
       </div>
@@ -73,4 +86,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login;

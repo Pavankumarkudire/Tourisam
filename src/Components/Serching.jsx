@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
+import {  useNavigate } from "react-router-dom";
 
 const Serching = () => {
   const [tours, setTours] = useState([]);
@@ -8,13 +7,8 @@ const Serching = () => {
   const [distance, setDistance] = useState("");
   const [maxGroupSize, setMaxGroupSize] = useState("");
   const [searchPerformed, setSearchPerformed] = useState(false);
+  const navigation = useNavigate();
 
-  useEffect(() => {
-    if (city || distance || maxGroupSize) {
-      getData();
-      
-    }
-  }, [city, distance, maxGroupSize]);
 
   const getData = async () => {
     try {
@@ -23,10 +17,10 @@ const Serching = () => {
           city
         )}&distance=${distance}&maxGroupSize=${maxGroupSize}`,
         {
-            method : "GET",
-            headers : {
-                "app-id": "65264833377b2d988a461078",
-            }
+          method: "GET",
+          headers: {
+            "app-id": "65264833377b2d988a461078",
+          },
         }
       );
       const res = await response.json();
@@ -52,8 +46,15 @@ const Serching = () => {
     getData();
   };
 
+  useEffect(() => {
+    if (searchPerformed) {
+        navigation(`/tours/Search?city=${encodeURIComponent(city)}&distance=${distance}&maxGroupSize=${maxGroupSize}`, { state: { tours } });
+    }
+  }, [searchPerformed, tours, navigation]);
   return (
     <>
+      
+
       <div className="Serching ms-5">
         <div className="Border">
           <div>
@@ -112,92 +113,9 @@ const Serching = () => {
           </div>
         </div>
       </div>
-      <div className="search-results mt-4">
-        {searchPerformed && (
-          <>
-            {tours.length === 0 && <p>No tours found</p>}
-            {tours.length > 0 && (
-              <div className="card-container">
-                {tours.map((tour) => (
-                  <div className="card">
-                    <Link
-                      to={`/product/${tour._id}`}
-                      style={{ textDecoration: "none", color: "#000000" }}
-                    >
-                      <img src={tour.photo} alt={tour.title} />
-                      <div className="pagination-body p-2">
-                        <div className="pagination-review">
-                          <i
-                            className="fa-solid fa-location-dot"
-                            style={{ color: "#de601b" }}
-                          ></i>
-                          <span>{tour.city}</span>
-                        </div>
-                        <div>
-                          <i
-                            className="fa-regular fa-star"
-                            style={{ color: "#faa935" }}
-                          ></i>
-                          <span className="card-text">
-                            {tour.reviews.length > 0
-                              ? (
-                                  tour.reviews.reduce(
-                                    (sum, review) => sum + review.rating,
-                                    0
-                                  ) / tour.reviews.length
-                                ).toFixed(1)
-                              : "No ratings"}
-                            ({tour.reviews.length}){" "}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="p-2">
-                        <h5>{tour.title}</h5>
-                        <div className="CardPrice">
-                          <p>
-                            <span style={{ color: "#de601b" }}>
-                              ${tour.price}
-                            </span>
-                            /per Person
-                          </p>
-                          <button className="Button">Book Now</button>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>  
-                ))}
-              </div>
-            )}
-          </>
-        )}
-      </div>
     </>
   );
 };
 
-export default Serching;
 
-// ------------------------------------
-{
-  /* <div className="search-results mt-4">
-        {searchPerformed && ( 
-          <>
-            {tours.length === 0 && <p>No tours found</p>}
-            {tours.length > 0 && (
-              <div className="card-container">
-                {tours.map((tour) => (
-                  <div key={tour._id} className="card">
-                    <div className="card-body">
-                      <p><strong>City:</strong> {tour.city}</p>
-                      <p><strong>Distance:</strong> {tour.distance} km</p>
-                      <p><strong>Max Group Size:</strong> {tour.maxGroupSize}</p>
-                      <p><strong>Name:</strong> {tour.name}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </>
-        )}
-      </div> */
-}
+export default Serching;

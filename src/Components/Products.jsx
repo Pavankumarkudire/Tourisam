@@ -5,21 +5,17 @@ import { RiMapPinUserFill } from "react-icons/ri";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuCircleDollarSign } from "react-icons/lu";
 import { RiMapPinTimeLine } from "react-icons/ri";
-import Avatar from "../images/avatar.jpg";
 import Footer from "./Footer";
+import Reviews from "./Reviews";
+import Booking from "./Booking";
 
 const Products = () => {
   const [product, setProduct] = useState(null);
-  const [review, setReview] = useState('');
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  const today = new Date();
-  const formattedDate = today.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  //   const today = new Date();
+
   const { id } = useParams();
   console.log(id);
+  
 
   const getData = async () => {
     const response = await fetch(
@@ -34,6 +30,8 @@ const Products = () => {
     getData();
   }, [id]);
 
+  
+
   return (
     <>
       <Navbar />
@@ -45,7 +43,7 @@ const Products = () => {
                 <img
                   src={product.photo}
                   alt={product.title}
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", height: "70vh" }}
                 />
               </div>
               <div className="BookingInfo border">
@@ -100,54 +98,7 @@ const Products = () => {
                   placeholder="this is the description"
                 ></textarea>
               </div>
-              <div className="Reviews border">
-                <h5>Riviews ({product.reviews.length} reviews)</h5>
-                <div>
-                  <i
-                    className="fa-regular fa-star"
-                    style={{ color: "#faa935" }}
-                  ></i>{" "}
-                  <i
-                    className="fa-regular fa-star"
-                    style={{ color: "#faa935" }}
-                  ></i>{" "}
-                  <i
-                    className="fa-regular fa-star"
-                    style={{ color: "#faa935" }}
-                  ></i>{" "}
-                  <i
-                    className="fa-regular fa-star"
-                    style={{ color: "#faa935" }}
-                  ></i>
-                  <i
-                    className="fa-regular fa-star"
-                    style={{ color: "#faa935" }}
-                  ></i>
-                </div>
-                <div className="ProductSerchingPage">
-                  <input type="text" placeholder="share your thoughts" />
-                  <button>submit</button>
-                </div>
-                <div className="userReviews">
-                  <div className="UserReview">
-                    <div style={{ width: "12%" }}>
-                      <img src={Avatar} alt="" style={{ width: "100%" }} />
-                    </div>
-                    <div>
-                      <p>{userData.username}</p>
-                      <p>{formattedDate}</p>
-                      <input type="text" placeholder="Not so good place" value={review} onChange={(e)=> setReview(e.target.value)}/>
-                    </div>
-                  </div>
-                  <div className="userRating">
-                    {product.reviews.length}
-                    <i
-                      className="fa-regular fa-star"
-                      style={{ color: "#faa935" }}
-                    ></i>
-                  </div>
-                </div>
-              </div>
+              <Reviews product={product} />
             </div>
             <div className=" singlePageRight col-md-3 border">
               <p className="border PriceOfPerson">
@@ -177,24 +128,7 @@ const Products = () => {
                   <input type="number" placeholder="Number of people" />
                 </div>
               </div>
-              <div className=" Bookings ">
-                <div className="Booking">
-                  <p>
-                    {product.price} <i className="fa-solid fa-xmark"></i>{" "}
-                    {product.maxGroupSize} person
-                  </p>
-                  <p>{product.price * product.maxGroupSize}</p>
-                </div>
-                <div className="Booking">
-                  <p>Service Charges</p>
-                  <p>10</p>
-                </div>
-                <div className="Booking">
-                  <p>Total</p>
-                  <p>{product.price * product.maxGroupSize + 10}</p>
-                </div>
-                <button className="product-Booking">Book Now</button>
-              </div>
+              <Booking product={product} />
             </div>
           </div>
         </div>

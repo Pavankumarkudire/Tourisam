@@ -1,8 +1,9 @@
 .ToursPage {
     position: relative; 
+    height: 50vh;
 }
 .ToursPage img{
-    height: 70vh;
+    height: 100%;
     width: 100%;
     
 }

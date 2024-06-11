@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useAuth } from "./Authentication";
-import "../css/Style.css"
-import "../css/Login.css"
+import "../css/Style.css";
+import "../css/Login.css";
 import "../css/Register.css";
 import "../css/Footer.css";
 import "../css/Navbar.css";
@@ -45,9 +45,9 @@ const Navbar = () => {
 
               {isLoggedIn ? (
                 <>
-                  {userData && (
+                  {userData && userData.data.username &&  (
                     <li>
-                      <p className="DummyUser">{userData.username}</p>
+                      <p className="DummyUser">{userData.data.username}</p>
                     </li>
                   )}
 

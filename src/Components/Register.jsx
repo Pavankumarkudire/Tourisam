@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import RegisterImg from "../images/register.png";
 import RegisterImg1 from "../images/user.png";
@@ -15,40 +16,40 @@ const Register = () => {
     if (email && password && username) {
       const userData = { username, email, password };
 
-    //   try {
-    //     const response = await fetch(
-    //       `https://tour-booking-tu7f.onrender.com/api/v1/auth/register`,
-    //       {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(userData),
-    //       }
-    //     );
-    //     console.log(response);
+      try {
+        const response = await fetch(
+          `https://tour-booking-tu7f.onrender.com/api/v1/auth/register`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          }
+        );
 
-
-        // if (response.ok) {
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Registration failed:", errorData);
+          alert(`Registration failed: ${errorData.message || "Please try again."}`);
+        } else {
+          const data = await response.json();
+          console.log("Registration successful:", data);
           localStorage.setItem("userData", JSON.stringify(userData));
           navigate("/login");
-        // } else {
-        //   alert("Registration failed. Please try again.");
-        // }
-    //   } catch (error) {
-    //     alert("An error occurred. Please try again.");
-    //   }
-      
-    // } else {
-    //   alert("Please enter username, email, and password.");
-    // }
-    
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+        alert("An error occurred. Please try again.");
+      }
+    } else {
+      alert("Please enter username, email, and password.");
+    }
   };
-}
 
   return (
     <div>
-      <Navbar isLoggedIn={false} />
+      <Navbar isLoggedIn= {true}/>
       <div className="RegisterPage">
         <div className="RegisterImage">
           <img src={RegisterImg} alt="Register" />
@@ -56,7 +57,7 @@ const Register = () => {
         <div className="RegisterForm">
           <img src={RegisterImg1} alt="User" />
           <h4 className="RegisterHeader">Register</h4>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
               id="UserName"
@@ -82,7 +83,12 @@ const Register = () => {
           <button onClick={handleRegister}>Create Account</button>
           <p>
             Already have an account?{" "}
-            <span style={{ color: "black" }}>Login</span>
+            <Link
+              to="/login"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              <span>Login</span>
+            </Link>
           </p>
         </div>
       </div>

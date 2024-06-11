@@ -10,8 +10,9 @@ const Cards = () => {
   
 
   const getData = async () => {
+    try{
       const response = await fetch(
-        "https://tour-booking-tu7f.onrender.com/api/v1/tours",
+        "https://tour-booking-tu7f.onrender.com/api/v1/tours/search/getFeaturedTours",
         {
           method: "GET",
           headers: {
@@ -22,6 +23,10 @@ const Cards = () => {
       const responseData = await response.json();
       setData(responseData.data);
       console.log(responseData.data);
+    }
+    catch{
+        alert("data is not found")
+    }
     }
     
 
@@ -46,6 +51,7 @@ const Cards = () => {
                       src={tour.photo}
                       alt={tour.title}
                     />
+                    <p>{tour.featured}</p>
                     <div className="card-body">
                       <div className="card-review">
                         <div>

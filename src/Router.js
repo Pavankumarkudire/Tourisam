@@ -7,6 +7,8 @@ import Register from "./Components/Register";
 import { AuthProvider} from "./Components/Authentication";
 import Logout from "./Components/Logout";
 import Products from "./Components/Products";
+import Tours1 from "./Components/Tours1";
+import BookingCard from "./Components/BookingCard";
 
 const Router = () => {
   return (
@@ -18,6 +20,8 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tours" element={<Tours />} />
+            <Route path="/tours/Search" element={<Tours1/>}/>
+            <Route path="/tours/Booking" element = {<BookingCard/>}/>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/Logout" element={<Logout />}/>

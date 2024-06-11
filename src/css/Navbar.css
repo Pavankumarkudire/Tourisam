@@ -3,16 +3,17 @@
 .DummyUser{
     margin: 1px 15px;
     text-align: center;
-    width: 85px;
-    padding: 30px auto;
+    padding: 10px 10px;
     background-color: #faa935;
     border-radius: 30px;
+
 }
 
 .LogoutButton{
-    margin: 10px auto;
+    margin: 1px auto;
     border: none;
     outline: none;
+    padding: 6px 10px;
     background-color: #212529;
     color: #ffffff;
 }

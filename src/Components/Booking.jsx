@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Booking = ({ product }) => {
-  const { id } = useParams();
   const navigate = useNavigate();
   const userData = JSON.parse(localStorage.getItem("userData"));
   console.log("userData:", userData);
